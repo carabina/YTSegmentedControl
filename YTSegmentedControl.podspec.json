@@ -18,10 +18,6 @@
     {
       "name": "YTSegmentedControl",
       "source_files": "YTSegmentedControl/YTSegmentedControl",
-      "dependencies": {
-        "YTCategory": [
-        ]
-      },
       "frameworks": [
         "UIKit"
       ]
