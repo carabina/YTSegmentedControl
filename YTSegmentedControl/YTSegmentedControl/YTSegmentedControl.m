@@ -12,13 +12,14 @@ static const CGFloat KDefaultItemWidth = 60;
 
 @implementation YTSegmentedItem
 
-- (id)initWithTitle:(NSString *)title image:(UIImage *)image
+- (id)initWithTitle:(NSString *)title image:(UIImage *)image  selectImage:(UIImage *)selectImage
 {
     self = [super init];
     if (self) {
         
         self.title = title;
         self.image = image;
+        self.selectImage = selectImage;
         
     }
     return self;
@@ -60,7 +61,7 @@ static const CGFloat KDefaultItemWidth = 60;
 {
     _item = item;
     self.iconView.image = item.image;
-    self.iconView.size = item.image.size;
+    self.iconView.frame = CGRectMake(0, 0, item.image.size.width, item.image.size.height) ;
     self.titleLabel.text = item.title;
 }
 
@@ -87,14 +88,16 @@ static const CGFloat KDefaultItemWidth = 60;
     [super layoutSubviews];
     
     const CGFloat gap = 10;
+    const CGFloat width = self.bounds.size.width;
+    const CGFloat height = self.bounds.size.height;
     
     self.backgroundImageView.frame = self.bounds;
     
     CGSize imageSize = self.iconView.image.size;
-    CGSize titleSize = [self.titleLabel.text boundingRectWithSize:CGSizeMake(self.width-imageSize.width, self.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil].size;
+    CGSize titleSize = [self.titleLabel.text boundingRectWithSize:CGSizeMake(width-imageSize.width, height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.titleLabel.font} context:nil].size;
     
-    self.iconView.frame = CGRectMake((self.width-imageSize.width-titleSize.width-(imageSize.width>0 ? gap : 0))/2, (self.height-imageSize.height)/2, imageSize.width, imageSize.height);
-    self.titleLabel.frame = CGRectMake(self.iconView.right+(imageSize.width>0 ? gap : 0), (self.height-titleSize.height)/2, titleSize.width, titleSize.height);
+    self.iconView.frame = CGRectMake((width-imageSize.width-titleSize.width-(imageSize.width>0 ? gap : 0))/2, (height-imageSize.height)/2, imageSize.width, imageSize.height);
+    self.titleLabel.frame = CGRectMake(CGRectGetMaxX(self.iconView.frame)+(imageSize.width>0 ? gap : 0), (height-titleSize.height)/2, titleSize.width, titleSize.height);
 }
 
 - (void)setSelected:(BOOL)selected
@@ -104,7 +107,7 @@ static const CGFloat KDefaultItemWidth = 60;
     NSDictionary *dictionary = selected ? self.selectedAttributeDictionary : self.normalAttributeDictionary;
     
     self.iconView.image = selected ? self.item.selectImage : self.item.image;
-    self.iconView.size = self.iconView.image.size;
+    self.iconView.frame = CGRectMake(0, 0, self.iconView.image.size.width, self.iconView.image.size.height);
     self.titleLabel.font = [dictionary objectForKey:NSFontAttributeName];
     self.titleLabel.textColor = [dictionary objectForKey:NSForegroundColorAttributeName];
     self.backgroundImageView.image = selected ? self.selectBackgroundImage : self.backgroundImage;
@@ -210,7 +213,9 @@ static const CGFloat KDefaultItemWidth = 60;
 
 - (void)clearItem
 {
-    [self.contentView removeAllSubviews];
+    for (UIView *view in self.contentView.subviews) {
+        [view removeFromSuperview];
+    }
     [self.itemButtonArray removeAllObjects];
 }
 
@@ -359,11 +364,11 @@ static const CGFloat KDefaultItemWidth = 60;
         CGFloat contentOffx = self.contentView.contentOffset.x;
         
         CGFloat minVisualX = contentOffx;
-        CGFloat maxVisualX = minVisualX + self.contentView.width > contentWidth ? contentWidth : minVisualX + self.contentView.width;
-        if (itemView.right > maxVisualX || itemView.left < minVisualX)
+        CGFloat maxVisualX = minVisualX + self.contentView.frame.size.width > contentWidth ? contentWidth : minVisualX + self.contentView.frame.size.width;
+        if (CGRectGetMaxX(itemView.frame) > maxVisualX || CGRectGetMinX(itemView.frame) < minVisualX)
         {
-            CGFloat maxContentOffx = itemView.right - self.contentView.width < 0 ? 0 : itemView.right - self.contentView.width;
-            [self.contentView setContentOffset:CGPointMake(maxContentOffx, itemView.top)  animated:YES];
+            CGFloat maxContentOffx = CGRectGetMaxX(itemView.frame) - self.contentView.frame.size.width < 0 ? 0 : CGRectGetMaxX(itemView.frame) - self.contentView.frame.size.width;
+            [self.contentView setContentOffset:CGPointMake(maxContentOffx, itemView.frame.origin.y)  animated:YES];
         }
         
         if (!self.onlySelected)

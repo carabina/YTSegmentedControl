@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		875F12371DED26940026F378 /* YTSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 875F12361DED26940026F378 /* YTSegmentedControl.m */; };
-		875F123E1DED281E0026F378 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 875F123A1DED281E0026F378 /* UIColor+Ext.m */; };
-		875F123F1DED281E0026F378 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 875F123C1DED281E0026F378 /* UIView+Ext.m */; };
 		875F12481DED2DF20026F378 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 875F12471DED2DF20026F378 /* main.m */; };
 		875F124B1DED2DF20026F378 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 875F124A1DED2DF20026F378 /* AppDelegate.m */; };
 		875F124E1DED2DF20026F378 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 875F124D1DED2DF20026F378 /* ViewController.m */; };
 		875F12511DED2DF20026F378 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875F124F1DED2DF20026F378 /* Main.storyboard */; };
 		875F12531DED2DF20026F378 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 875F12521DED2DF20026F378 /* Assets.xcassets */; };
 		875F12561DED2DF20026F378 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875F12541DED2DF20026F378 /* LaunchScreen.storyboard */; };
-		875F125B1DED2E2B0026F378 /* UIColor+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 875F123A1DED281E0026F378 /* UIColor+Ext.m */; };
-		875F125C1DED2E2B0026F378 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 875F123C1DED281E0026F378 /* UIView+Ext.m */; };
 		875F125D1DED2E2B0026F378 /* YTSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 875F12361DED26940026F378 /* YTSegmentedControl.m */; };
 		875F125E1DED2E340026F378 /* YTSegmentedControl.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 875F12351DED26940026F378 /* YTSegmentedControl.h */; };
 		875F12651DED2EAC0026F378 /* segmented_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 875F12611DED2EAC0026F378 /* segmented_bg@2x.png */; };
 		875F12661DED2EAC0026F378 /* segmented_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 875F12621DED2EAC0026F378 /* segmented_bg@3x.png */; };
 		875F12671DED2EAC0026F378 /* segmented_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 875F12631DED2EAC0026F378 /* segmented_selected@2x.png */; };
 		875F12681DED2EAC0026F378 /* segmented_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 875F12641DED2EAC0026F378 /* segmented_selected@3x.png */; };
+		875F127B1DED3F590026F378 /* email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 875F12751DED3F590026F378 /* email@2x.png */; };
+		875F127C1DED3F590026F378 /* email@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 875F12761DED3F590026F378 /* email@3x.png */; };
+		875F127D1DED3F590026F378 /* feedback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 875F12771DED3F590026F378 /* feedback@2x.png */; };
+		875F127E1DED3F590026F378 /* feedback@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 875F12781DED3F590026F378 /* feedback@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,11 +43,6 @@
 		875F12291DED26770026F378 /* libYTSegmentedControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYTSegmentedControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		875F12351DED26940026F378 /* YTSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTSegmentedControl.h; sourceTree = "<group>"; };
 		875F12361DED26940026F378 /* YTSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSegmentedControl.m; sourceTree = "<group>"; };
-		875F12391DED281E0026F378 /* UIColor+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Ext.h"; sourceTree = "<group>"; };
-		875F123A1DED281E0026F378 /* UIColor+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Ext.m"; sourceTree = "<group>"; };
-		875F123B1DED281E0026F378 /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
-		875F123C1DED281E0026F378 /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
-		875F123D1DED281E0026F378 /* YTCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTCategory.h; sourceTree = "<group>"; };
 		875F12441DED2DF20026F378 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		875F12471DED2DF20026F378 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		875F12491DED2DF20026F378 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +57,10 @@
 		875F12621DED2EAC0026F378 /* segmented_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segmented_bg@3x.png"; sourceTree = "<group>"; };
 		875F12631DED2EAC0026F378 /* segmented_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segmented_selected@2x.png"; sourceTree = "<group>"; };
 		875F12641DED2EAC0026F378 /* segmented_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segmented_selected@3x.png"; sourceTree = "<group>"; };
+		875F12751DED3F590026F378 /* email@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "email@2x.png"; sourceTree = "<group>"; };
+		875F12761DED3F590026F378 /* email@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "email@3x.png"; sourceTree = "<group>"; };
+		875F12771DED3F590026F378 /* feedback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedback@2x.png"; sourceTree = "<group>"; };
+		875F12781DED3F590026F378 /* feedback@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feedback@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +84,6 @@
 		875F12201DED26770026F378 = {
 			isa = PBXGroup;
 			children = (
-				875F12381DED281E0026F378 /* YTCategory */,
 				875F122B1DED26770026F378 /* YTSegmentedControl */,
 				875F12451DED2DF20026F378 /* Demo */,
 				875F122A1DED26770026F378 /* Products */,
@@ -108,18 +106,6 @@
 				875F12361DED26940026F378 /* YTSegmentedControl.m */,
 			);
 			path = YTSegmentedControl;
-			sourceTree = "<group>";
-		};
-		875F12381DED281E0026F378 /* YTCategory */ = {
-			isa = PBXGroup;
-			children = (
-				875F12391DED281E0026F378 /* UIColor+Ext.h */,
-				875F123A1DED281E0026F378 /* UIColor+Ext.m */,
-				875F123B1DED281E0026F378 /* UIView+Ext.h */,
-				875F123C1DED281E0026F378 /* UIView+Ext.m */,
-				875F123D1DED281E0026F378 /* YTCategory.h */,
-			);
-			path = YTCategory;
 			sourceTree = "<group>";
 		};
 		875F12451DED2DF20026F378 /* Demo */ = {
@@ -150,6 +136,10 @@
 		875F12601DED2EAC0026F378 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				875F12751DED3F590026F378 /* email@2x.png */,
+				875F12761DED3F590026F378 /* email@3x.png */,
+				875F12771DED3F590026F378 /* feedback@2x.png */,
+				875F12781DED3F590026F378 /* feedback@3x.png */,
 				875F12611DED2EAC0026F378 /* segmented_bg@2x.png */,
 				875F12621DED2EAC0026F378 /* segmented_bg@3x.png */,
 				875F12631DED2EAC0026F378 /* segmented_selected@2x.png */,
@@ -239,12 +229,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				875F12671DED2EAC0026F378 /* segmented_selected@2x.png in Resources */,
+				875F127B1DED3F590026F378 /* email@2x.png in Resources */,
+				875F127C1DED3F590026F378 /* email@3x.png in Resources */,
 				875F12651DED2EAC0026F378 /* segmented_bg@2x.png in Resources */,
 				875F12561DED2DF20026F378 /* LaunchScreen.storyboard in Resources */,
 				875F12531DED2DF20026F378 /* Assets.xcassets in Resources */,
 				875F12661DED2EAC0026F378 /* segmented_bg@3x.png in Resources */,
+				875F127D1DED3F590026F378 /* feedback@2x.png in Resources */,
 				875F12511DED2DF20026F378 /* Main.storyboard in Resources */,
 				875F12681DED2EAC0026F378 /* segmented_selected@3x.png in Resources */,
+				875F127E1DED3F590026F378 /* feedback@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +250,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				875F12371DED26940026F378 /* YTSegmentedControl.m in Sources */,
-				875F123E1DED281E0026F378 /* UIColor+Ext.m in Sources */,
-				875F123F1DED281E0026F378 /* UIView+Ext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,8 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				875F125B1DED2E2B0026F378 /* UIColor+Ext.m in Sources */,
-				875F125C1DED2E2B0026F378 /* UIView+Ext.m in Sources */,
 				875F125D1DED2E2B0026F378 /* YTSegmentedControl.m in Sources */,
 				875F124E1DED2DF20026F378 /* ViewController.m in Sources */,
 				875F124B1DED2DF20026F378 /* AppDelegate.m in Sources */,
@@ -336,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -377,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -445,6 +435,7 @@
 				875F12341DED26770026F378 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		875F12581DED2DF20026F378 /* Build configuration list for PBXNativeTarget "Demo" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +444,7 @@
 				875F125A1DED2DF20026F378 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -19,10 +19,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    YTSegmentedItem *item = [[YTSegmentedItem alloc] initWithTitle:@"zero" image:nil];
-    YTSegmentedItem *item2 = [[YTSegmentedItem alloc] initWithTitle:@"one" image:nil];
-    YTSegmentedItem *item3 = [[YTSegmentedItem alloc] initWithTitle:@"two" image:nil];
-    YTSegmentedItem *item4 = [[YTSegmentedItem alloc] initWithTitle:@"three" image:nil];
+    YTSegmentedItem *item = [[YTSegmentedItem alloc] initWithTitle:@"zero" image:[UIImage imageNamed:@"email"] selectImage:[UIImage imageNamed:@"email"]];
+    YTSegmentedItem *item2 = [[YTSegmentedItem alloc] initWithTitle:@"one" image:[UIImage imageNamed:@"feedback"] selectImage:[UIImage imageNamed:@"feedback"]];
+    YTSegmentedItem *item3 = [[YTSegmentedItem alloc] initWithTitle:@"two" image:[UIImage imageNamed:@"email"] selectImage:[UIImage imageNamed:@"email"]];
+    YTSegmentedItem *item4 = [[YTSegmentedItem alloc] initWithTitle:@"three" image:[UIImage imageNamed:@"feedback"] selectImage:[UIImage imageNamed:@"feedback"]];
 
     YTSegmentedControl *segmentedControl = [[YTSegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:item, item2, item3, item4, nil]];
     segmentedControl.frame = CGRectMake(10, 40, 200, 50);

@@ -3,35 +3,35 @@
 //  FSO
 //
 //  全局外观支持
-//    UIImage *selectedImage = [[YXSkin imageNamed:@"segmented_selected_red"] stretchableImage];
-//    UIImage *unSelectedImage = [UIImage imageWithColor:[UIColor clearColor]];
-//    [[YXSegmentedControl appearance] setSelectedImage:selectedImage];
-//    [[YXSegmentedControl appearance] setNormalImage:unSelectedImage];
-//    [[YXSegmentedControl appearance] setNormalAttributeDictionary:@{TextFontAttribute:[UIFont iOS7FontWithSize:16 attribute:Font7AttributeNone], TextColorAttribute:[UIColor colorWithRed:1 green:1 blue:1 alpha:0.8]}];
-//    [[YXSegmentedControl appearance] setSelectedAttributeDictionary:@{TextFontAttribute:[UIFont iOS7FontWithSize:16 attribute:Font7AttributeMedium], TextColorAttribute:[UIColor colorWhite]}];
-//    [[YXSegmentedControl appearance] setContentEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
-//    [[YXSegmentedControl appearance] setItemWidth:80];
+//    UIImage *selectedImage = [[UIImage imageNamed:@"segmented_selected"] stretchableImageWithLeftCapWidth:[UIImage imageNamed:@"segmented_selected"].size.width/2 topCapHeight:[UIImage imageNamed:@"segmented_selected"].size.height/2];
+//    UIImage *unSelectedImage = [[UIImage imageNamed:@"segmented_bg"] stretchableImageWithLeftCapWidth:[UIImage imageNamed:@"segmented_bg"].size.width/2 topCapHeight:[UIImage imageNamed:@"segmented_bg"].size.height/2];
+//    [[YTSegmentedControl appearance] setSelectedItemBgImage:selectedImage];
+//    [[YTSegmentedControl appearance] setNormalItemBgImage:unSelectedImage];
+//    [[YTSegmentedControl appearance] setNormalAttributeDictionary:@{NSFontAttributeName:[UIFont systemFontOfSize:14], NSForegroundColorAttributeName:[UIColor blueColor]}];
+//    [[YTSegmentedControl appearance] setSelectedAttributeDictionary:@{NSFontAttributeName:[UIFont systemFontOfSize:14], NSForegroundColorAttributeName:[UIColor grayColor]}];
+//    [[YTSegmentedControl appearance] setContentEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 10)];
+//    [[YTSegmentedControl appearance] setItemWidth:80];
 //
 //  实例
-//    YXSegmentedItem *item = [[YXSegmentedItem alloc] initWithTitle:@"one" image:nil controllerClass:nil];
-//    YXSegmentedItem *item2 = [[YXSegmentedItem alloc] initWithTitle:@"two" image:nil controllerClass:nil];
+//    YTSegmentedItem *item = [[YTSegmentedItem alloc] initWithTitle:@"zero" image:nil];
+//    YTSegmentedItem *item2 = [[YTSegmentedItem alloc] initWithTitle:@"one" image:nil];
+//    YTSegmentedItem *item3 = [[YTSegmentedItem alloc] initWithTitle:@"two" image:nil];
+//    YTSegmentedItem *item4 = [[YTSegmentedItem alloc] initWithTitle:@"three" image:nil];
 //
-//    YXSegmentedControl *segmentedControl = [[YXSegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:item, item2, nil]];
-//    segmentedControl.frame = CGRectMake(0, 0, self.tableView.width, 130);
-//    segmentedControl.contentCorner = 5;
-//    self.tableView.tableHeaderView = segmentedControl;
+//    YTSegmentedControl *segmentedControl = [[YTSegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:item, item2, item3, item4, nil]];
+//    segmentedControl.frame = CGRectMake(10, 40, 200, 50);
 //    [segmentedControl addTarget:self action:@selector(segmentedControlSelected:) forControlEvents:UIControlEventValueChanged];
+//    [self.view addSubview:segmentedControl];
 //
 //  Created by songyutao on 14-11-25.
 //  Copyright (c) 2014年 Creditease. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "YTCategory.h"
 
 @interface YTSegmentedItem : NSObject
 
-- (id)initWithTitle:(NSString *)title image:(UIImage *)image;
+- (id)initWithTitle:(NSString *)title image:(UIImage *)image selectImage:(UIImage *)selectImage;
 
 @property(nonatomic, strong)UIImage         *image;
 @property(nonatomic, strong)UIImage         *selectImage;
